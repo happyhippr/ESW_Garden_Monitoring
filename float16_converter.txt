@@ -1,0 +1,33 @@
+import numpy as np
+
+
+data = '0b0100111010001011'
+S = int(data[0])
+E = int(data[3:8],2)
+T = int(data[8:18],2)
+print(data)
+print('-----------------------------------')
+print(S)
+print('-----------------------------------')
+print(E)
+print('-----------------------------------')
+print(T)
+print()
+
+value = 'nothing'
+if(E==31):
+    if(T==0):
+        value = 'infinity'
+    if not(T==0):
+        print('dengy')
+        
+if(0<E<31):
+    value = ((-1)**S) * (2**(E-15)) * (1+2**(-10)*T)
+    
+if(E==0):
+    if(T==0):
+        value = 0
+    if not (T==0):
+        value = ((-1)**S) * (2**(-14)) * (0+(2**(-10)*T))
+
+print(value)
