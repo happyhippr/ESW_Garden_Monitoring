@@ -18,7 +18,7 @@ function definitions
 '''
 def setup_logger():
     try:
-        filepath_log = '/home/pi/Desktop/Logs/'
+        filepath_log = '/home/pi/Desktop/ESW_Garden_Monitoring/Logs'
         #date = str(datetime.date.today())
         date = get_date()
         filepath = filepath_log+date+'/'
